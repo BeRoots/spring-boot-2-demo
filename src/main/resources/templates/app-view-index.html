@@ -5,15 +5,6 @@
 	<title>Home</title>
 </head>
 <body>
-	<div style="width:100%">
-		<div style="float:right; margin-right:5px;">
-			<a href="/localize/en_GB">English</a>
-		</div>
-		<div style="float:right; margin-right:5px;">
-			<a href="/localize/fr_FR">Français</a>
-		</div>
-	</div>
-	<br />
-	<h1 layout:fragment="content"><span>#{app.view.index.00001strid}</span> #{app.view.index.00002strid}</h1>
+	<h1 layout:fragment="content"><span th:text="#{app.view.index.00001strid}"></span>&nbsp;<span th:text="#{app.view.index.00002strid}"></span></h1>
 </body>
 </html>

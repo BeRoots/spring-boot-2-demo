@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" lang="#{app.layout.00001strid}">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
 	<meta charset="UTF-8" />
-	<title layout:title-pattern="$DECORATOR_TITLE &there4; $CONTENT_TITLE">#{app.layout.00002strid}</title>
+	<title layout:title-pattern="$DECORATOR_TITLE &there4; $CONTENT_TITLE" th:text="#{app.layout.00002strid}"></title>
 </head>
 <body>
-	<section layout:fragment="content">#{app.layout.00003strid}</section>
+	<div style="width:100%">
+		<div style="float:right; margin-right:5px;">
+			<a href="/localize/en_US">English (US)</a>
+		</div>
+		<div style="float:right; margin-right:5px;">
+			<a href="/localize/fr_FR">Français (FR)</a>
+		</div>
+	</div>
+	<br />
+	<section layout:fragment="content"><p th:text="#{app.layout.00003strid}"></p></section>
 </body>
 </html>
