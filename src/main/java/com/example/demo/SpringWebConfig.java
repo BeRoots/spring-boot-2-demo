@@ -58,7 +58,7 @@ public class SpringWebConfig implements WebMvcConfigurer, ApplicationContextAwar
         // enables Spring's own MessageSource message resolution mechanisms.
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
         templateEngine.setTemplateResolver(templateResolver());
-        // Adding LayoutDialect
+        // Adding LayoutDialect 
         templateEngine.addDialect(new LayoutDialect());
         // Enabling the SpringEL compiler with Spring 4.2.4 or newer can
         // speed up execution in most scenarios, but might be incompatible
@@ -66,12 +66,6 @@ public class SpringWebConfig implements WebMvcConfigurer, ApplicationContextAwar
         // across different data types, so this flag is "false" by default
         // for safer backwards compatibility.
         templateEngine.setEnableSpringELCompiler(true);
-        //Layout Dialect???
-        System.out.println("-----------------------------------");
-        System.out.println("-----------------------------------");
-        System.out.println(templateEngine.getDialects());
-        System.out.println("-----------------------------------");
-        System.out.println("-----------------------------------");
         return templateEngine;
     }
 
